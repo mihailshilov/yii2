@@ -10,10 +10,10 @@
 
 
 
-<?php/// $this->RegisterJsFile('@web/js/scripts.js', ['depends' => 'app\assets\AppAsset']) ?>
-<?php// $this->registerJs("$('.container').append('<p>show</p>');", \yii\web\View::POS_LOAD) ?>
+<?php $this->RegisterJsFile('@web/js/scripts.js', ['depends' => 'app\assets\AppAsset']) ?>
+<?php $this->registerJs("$('.container').append('<p>show</p>');", \yii\web\View::POS_LOAD) ?>
 
-<?php// $this->registerCss('.container{background:#f5f5f5;}') ?>
+<?php $this->registerCss('.container{background:#f5f5f5;}') ?>
 
 <?php 
 $js = <<< JS
