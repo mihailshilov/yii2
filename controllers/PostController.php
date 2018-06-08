@@ -1,6 +1,8 @@
 <?php
 
 namespace app\controllers;
+use app\models\Post;
+use yii\db\ActiveRecord;
 
 /**
  * Description of PostController
@@ -10,7 +12,9 @@ namespace app\controllers;
 class PostController extends AppController{
     
     public function actionIndex() {
-        return $this->render('index');
+        $posts = Post::find()->select('id, title, excerpt')->all();
+        //$this->debug($posts);
+        return $this->render('index', compact('posts'));
     }
     
     public function actionTest() {
